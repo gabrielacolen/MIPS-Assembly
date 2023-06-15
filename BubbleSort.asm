@@ -49,11 +49,9 @@ addi $s2, $zero, 0		# inicializa j = 0
 	j forInterno			# volta para o início do loop interno
 	
 	fimLoopInterno:	
-	ultimoElemento:
+
 addi $s1, $s1, 1		# i++
 j forExterno
-
-
 
 fimLoopExterno:
 j fim

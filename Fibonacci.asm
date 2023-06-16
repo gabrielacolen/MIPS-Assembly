@@ -18,12 +18,12 @@ loop:
 sll $t5, $t4, 3		# contador*8
 add $t5, $t5, $t0	# end = end base + contador*8
 beq $t4, 23, fim	# se (contador == 100), vá para fim
+
+sw $t1, 0($t5)		# MEM [c] = a
+sw $t2, 4($t5)		# MEM [c+1] = b
 add $t1, $t1, $t2	# a = a + b
 add $t2, $t1, $t2	# b = a + b
 addi $t4, $t4, 1	# contador++
-
-sw $t1, 0($t5)		
-sw $t2, 4($t5)
 j loop
 
 fim:

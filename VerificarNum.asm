@@ -28,7 +28,7 @@ addi $t1, $zero, 150
 slt $t2, $s0, $t1	# se (x<150) vá para fim
 beq $t2, 1, fim
 addi $t1, $zero, 200
-slt $t2, $t1, $s0	# se (x>200) vá para fim, se não, termine
+slt $t2, $t1, $s0	# se (x>200) vá para fim, se não, jump to true
 beq $t2, 1, fim
 j true
 

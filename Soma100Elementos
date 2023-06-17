@@ -12,7 +12,7 @@ lw $t1, 0($t0)		# a = MEM[0]
 add $s0, $zero, $zero	# contador = 0
 
 loop: 
-beq $s0, 100, fim	# se (contador == 99) vá para fim
+beq $s0, 100, fim	# se (contador == 100) vá para fim
 add $t2, $t2, $t1	# soma = soma + t1
 add $s0, $s0, 1		# contador ++
 sll $t1, $s0, 2		# contador*4

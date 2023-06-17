@@ -16,7 +16,7 @@ lw $s0, 0($t0)		# a = MEM[0]
 lw $s1, 4($t0)		# b = MEM[1]
 lw $s2, 8($t0)		# c = MEM[2]
 
-slt $t1, $s0, $s1 	# se (a < b), vá para pular
+slt $t1, $s0, $s1 	# se (a < b), vá para AmenorB
 beq $t1, 1, AmenorB		
 add $a0, $zero, $s0	# a0 = a
 add $a1, $zero, $s1	# a1 = b
@@ -25,7 +25,7 @@ add $s0, $zero, $v0
 add $s1, $zero, $v1
 
 AmenorB:
-slt $t1, $s1, $s2	# se (b < c), vá para pular
+slt $t1, $s1, $s2	# se (b < c), vá para BmenorC
 beq $t1, 1, BmenorC		
 add $a0, $zero, $s1	# a0 = b
 add $a1, $zero, $s2	# a1 = c
@@ -34,7 +34,7 @@ add $s1, $zero, $v0
 add $s2, $zero, $v1
 
 BmenorC:
-slt $t1, $s0, $s1 	# se (a < b), vá para pular
+slt $t1, $s0, $s1 	# se (a < b), vá para fim
 beq $t1, 1, fim		
 add $a0, $zero, $s0	# a0 = a
 add $a1, $zero, $s1	# a1 = b

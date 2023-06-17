@@ -6,8 +6,6 @@
 #    registrador flag = 1;
 # caso contrário
 #    registrador flag = 0;
-# MIPS - Assembly
-# Gabriela Colen Castelo Borges
 
 .text
 .globl main
